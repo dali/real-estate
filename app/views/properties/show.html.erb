@@ -1,0 +1,37 @@
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @property.rooms %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @property.bathrooms %>
+</p>
+
+    <% if @property.photo.present? %>
+     
+      <p>
+      <strong>Photo:</strong>
+       <%= image_tag @property.photo.thumb.url %>
+    </p>
+    <% end %>
+
+<%= link_to 'Edit property', edit_property_path(@property), class:"btn btn-info" %> 
+
