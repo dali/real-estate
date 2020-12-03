@@ -20,7 +20,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise', '~> 4.2'
 
 gem 'carrierwave', '~> 0.11.2'
-gem 'fog', '~> 2.2'
 gem 'mini_magick', '~> 4.11'
 
 # Reduces boot times through caching; required in config/boot.rb
