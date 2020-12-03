@@ -1,37 +1,44 @@
+  <div class="property-main-photo" style="background-image:url('<%= property_photo_url(@property) %>')">
+    <div class="photo-overlay">
+    </div> 
+  </div>
+ <div class="container">
+      <div class="row">
+        <div class="col-8">
 
+              
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
+            <p>
+              <strong>Name:</strong>
+              <%= @property.name %>
+            </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
+            <p>
+              <strong>Address:</strong>
+              <%= @property.address %>
+            </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+            <p>
+              <strong>Price:</strong>
+              <%= @property.price %>
+            </p>
 
-<p>
-  <strong>Rooms:</strong>
-  <%= @property.rooms %>
-</p>
+            <p>
+              <strong>Rooms:</strong>
+              <%= @property.rooms %>
+            </p>
 
-<p>
-  <strong>Bathrooms:</strong>
-  <%= @property.bathrooms %>
-</p>
-
-    <% if @property.photo.present? %>
-     
-      <p>
-      <strong>Photo:</strong>
-       <%= image_tag @property.photo.thumb.url %>
-    </p>
-    <% end %>
-
-<%= link_to 'Edit property', edit_property_path(@property), class:"btn btn-info" %> 
+            <p>
+              <strong>Bathrooms:</strong>
+              <%= @property.bathrooms %>
+            </p>
+            
+            <%= link_to 'Edit property', edit_property_path(@property), class:"btn" %> 
+        
+        </div>
+        <div class="col-4">
+          <%= render "properties/agent_details" %>
+        </div>
+    </div>
+</div>
 

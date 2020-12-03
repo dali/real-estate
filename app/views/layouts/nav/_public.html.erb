@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Real Estate Finder</a>
+      <%= link_to "Real Estate Finder", root_path, class:"navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -10,6 +10,7 @@
           <% if account_signed_in? %>
             <%= link_to "Dashborad", dashboard_path, class:"nav-link" %>
             <% else %>
+            <%= link_to "Home", root_path, class:"nav-link" %>
             <% end %>
           </li>
           <li class="nav-item">
